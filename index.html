@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Memory Palace with A-Frame</title>
+    <meta name="description" content="Virtual Memory Palace with A-Frame">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+    <a-scene
+        environment="preset: arches; ground: flat; fog: 0; dressing: none; groundColor: #ffd494; groundTexture: none; grid: none">
+        <a-assets>
+            <img id="woodfloor" src="./assets/images/woodfloor.jpg">
+            <img id="wall" src="./assets/images/wall.jpg">
+            <img id="citycenter" src="./assets/images/citycenter.jpg">
+            <a-asset-item id="building" src="./assets/models/supermarket/scene.gltf"></a-asset-item>
+            <a-asset-item id="shelf1" src="./assets/models/shelf1/scene.gltf"></a-asset-item>
+            <a-asset-item id="shelf2" src="./assets/models/shelf2/scene.gltf"></a-asset-item>
+            <a-asset-item id="light" src="./assets/models/light/scene.gltf"></a-asset-item>
+            <a-asset-item id="cashier1" src="./assets/models/cashier1/scene.gltf"></a-asset-item>
+            <a-asset-item id="cashier2" src="./assets/models/cashier2/scene.gltf"></a-asset-item>
+            <a-asset-item id="neighbourhood" src="./assets/models/neighbourhood/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp1" src="./assets/models/lp1/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp2" src="./assets/models/lp2/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp3" src="./assets/models/lp3/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp4" src="./assets/models/lp4/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp5" src="./assets/models/lp5/scene.gltf"></a-asset-item>
+            <a-asset-item id="lp6" src="./assets/models/lp6/scene.gltf"></a-asset-item>
+            <a-asset-item id="grass" src="./assets/models/grass_patch/scene.gltf"></a-asset-item>
+            <a-asset-item id="mdroad" src="./assets/models/md_roads/scene.gltf"></a-asset-item>
+            <a-asset-item id="mdroadForward" src="./assets/models/md_roads/roadForward.gltf"></a-asset-item>
+            <a-asset-item id="mdroadT" src="./assets/models/md_roads/roadT.gltf"></a-asset-item>
+            <a-asset-item id="lawn" src="./assets/models/lawn/lawn.gltf"></a-asset-item>
+            <a-asset-item id="tree1" src="./assets/models/spruce_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree2" src="./assets/models/cypress_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="tree3" src="./assets/models/birch_tree/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity id="rig" position="-15.000 1.7 95.000">
+            <a-camera id="camera" look-controls wasd-controls="acceleration: 700" cursor="rayOrigin:mouse"></a-camera>
+        </a-entity>
+        <a-entity>
+            <a-entity gltf-model="#mdroadForward" position="23.892 0.100 38.596" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="23.892 0.100 19.613" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="23.892 0.100 1.086" rotation="0 90 0" scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="23.892 0.100 -17.677" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="23.892 0.100 -37.063" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+
+            <a-entity gltf-model="#mdroadForward" position="-27.682 0.100 38.596" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-27.682 0.100 19.613" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-27.682 0.100 1.086" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-27.682 0.100 -17.677" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-27.682 0.100 -37.063" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+
+            <a-entity gltf-model="#mdroadT" position="-41.777 0.100 26.150" rotation="0 180 0" scale="0.155 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadT" position="9.698 0.100 26.150" rotation="0 180 0" scale="0.155 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadT" position="-16.924 0.100 56.554" rotation="0 0 0" scale="0.155 0.1 0.155">
+            </a-entity>
+
+            <a-entity gltf-model="#mdroadForward" position="-0.661 0.100 87.717" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-0.661 0.100 105.535" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-0.661 0.100 112.903" rotation="0 90 0"
+                scale="0.1 0.1 0.155"></a-entity>
+            <a-entity gltf-model="#mdroadForward" position="11.303 0.100 56.613" rotation="0 0 0" scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="30.658 0.100 56.613" rotation="0 0 0" scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="49.420 0.100 56.613" rotation="0 0 0" scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="66.429 0.100 56.613" rotation="0 0 0" scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-89.534 0.100 56.613" rotation="0 0 0"
+                scale="0.1 0.1 0.155">
+            </a-entity>
+            <a-entity gltf-model="#mdroadForward" position="-108.987 0.100 56.613" rotation="0 0 0"
+                scale="0.1 0.1 0.155">
+            </a-entity>
+        </a-entity>
+        <a-entity id="neighbourhood">
+            <a-entity gltf-model="#lp1" position="40 0 0" rotation="0 90 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="#lp1" position="40 0 -45" rotation="0 90 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="#lp1" position="81.201 0 0" rotation="0 90 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="#lp1" position="81.201 0 -45" rotation="0 90 0" scale="10 10 10"></a-entity>
+            <a-entity gltf-model="#lp2" position="-61.662 0 76.077" rotation="0 90 0" scale="1 1 1"></a-entity>
+            <a-entity gltf-model="#lp2" position="44.875 0 76.077" rotation="0 90 0" scale="1 1 1"></a-entity>
+            <a-entity gltf-model="#lp6" position="-70 0 0" rotation="0 90 0" scale="0.250 0.250 0.250"></a-entity>
+            <a-entity gltf-model="#lp6" position="-70 0 -45" rotation="0 90 0" scale="0.250 0.250 0.250"></a-entity>
+        </a-entity>
+        <a-entity id="decorations">
+            <a-entity class="grassblock">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="26 0 0">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="52 0 0">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="78 0 0">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="26 0 -67.455">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="52 0 -67.455">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="78 0 -67.455">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="26 0 -118.921">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="52 0 -118.921">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="78 0 -118.921">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="26 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="52 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="78 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-0.959 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-0.959 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-26.421 0 0">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-50.039 0 0">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-26.421 0 -67.358">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-50.039 0 -67.586">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-26.421 0 -118.337">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-50.039 0 -118.337">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-26.421 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-50.039 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="20.701 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="-1.561 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity class="grassblock" position="45.588 0 -144.906">
+                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
+                <a-entity gltf-model="#lawn" position="-44.147 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            </a-entity>
+            <a-entity id="trees">
+                <a-entity gltf-model="#tree1" scale="0.03 0.03 0.03" position="3.182 0.000 67.383"></a-entity>
+                <a-entity gltf-model="#tree1" scale="0.050 0.050 0.050" position="26.041 0.000 -89.912"></a-entity>
+                <a-entity gltf-model="#tree2" scale="0.015 0.015 0.015" position="3.182 0.000 93.346"></a-entity>
+                <a-entity gltf-model="#tree2" scale="0.015 0.015 0.015" position="-32.803 0.000 76.091"
+                    rotation="0 180 0"></a-entity>
+                <a-entity gltf-model="#tree3" scale="0.03 0.03 0.03" position="25.474 0.000 21.002"></a-entity>
+                <a-entity gltf-model="#tree3" scale="0.03 0.03 0.03" position="-38.284 0.000 -78.696"></a-entity>
+            </a-entity>
+        </a-entity>
+        <a-entity id="architecture" class="marketplace" position="-17.201 0.037 4" rotation="0 0 0">
+            <a-plane id="floor" position="0 0 -20" rotation="-90 90 0" width="90" height="30" src="#woodfloor"
+                repeat="4 4"></a-plane>
+            <a-plane position="0 5 -65.000" width="30" height="10" src="#wall" repeat="2 1" material="side:double">
+            </a-plane>
+            <a-plane position="-2.5 5 25" rotation="0 180 0" width="25" height="10" src="#wall" repeat="2 1"
+                material="side:double"></a-plane>
+            <a-plane position="-15 5 -20" rotation="0 90 0" width="90" height="10" src="#wall" repeat="4 1"
+                material="side:double"></a-plane>
+            <a-plane position="15 5 -20" rotation="0 -90 0" width="90" height="10" src="#wall" repeat="4 1"
+                material="side:double"></a-plane>
+            <a-plane id="ceiling" position="0 10 -20" scale="1 3 1" width="30" height="30" rotation="90 0 0" material="metalness:1; roughness:0; transparent: true; opacity: 0.6; shader: standard; 
+           color: #faaf52; side:double;"></a-plane>
+            <a-text value="WEBVR" position="-10.053 5.162 25.184" font="kelsonsans" width="50"></a-text>
+            <a-text value="Supermarket" position="-10.053 3.162 25.184" font="kelsonsans" width="30"></a-text>
+        </a-entity>
+        <a-entity id="interior_decorations" class="interior">
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 8.392" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -1.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -11.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -21.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -31.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -41.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -51.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -25" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -35" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -45" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="-17.334 5.700 -55" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#cashier1" position="-17.334 0 20" rotation="0 110.659 0" scale="0.01 0.01 0.01">
+            </a-entity>
+            <a-entity gltf-model="#cashier2" position="-13.334 0 20" rotation="0 90 0" scale="0.01 0.01 0.01">
+            </a-entity>
+        </a-entity>
+</body>
+
+</html>
