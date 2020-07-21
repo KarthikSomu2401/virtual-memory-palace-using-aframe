@@ -38,10 +38,15 @@
             <a-asset-item id="tree1" src="./assets/models/spruce_tree/scene.gltf"></a-asset-item>
             <a-asset-item id="tree2" src="./assets/models/cypress_tree/scene.gltf"></a-asset-item>
             <a-asset-item id="tree3" src="./assets/models/birch_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="kitchen" src="./assets/models/low_poly_kitchen/scene.gltf"></a-asset-item>
+            <a-asset-item id="hut" src="./assets/models/hut_low/scene.gltf"></a-asset-item>
+            <a-asset-item id="table" src="./assets/models/dining_table/scene.gltf"></a-asset-item>
+            <a-asset-item id="cheese" src="./assets/models/cheese/scene.gltf"></a-asset-item>
         </a-assets>
         <a-entity id="rig" position="-15.000 1.7 95.000">
-            <a-camera id="camera" look-controls wasd-controls="acceleration: 700" cursor="rayOrigin:mouse"></a-camera>
+            <a-camera id="camera" look-controls wasd-controls="acceleration: 200" cursor="rayOrigin:mouse"></a-camera>
         </a-entity>
+        <a-light color="white" position="0 10 0"></a-light>
         <a-entity>
             <a-entity gltf-model="#mdroadForward" position="23.892 0.100 38.596" rotation="0 90 0"
                 scale="0.1 0.1 0.155"></a-entity>
@@ -98,7 +103,7 @@
             <a-entity gltf-model="#lp1" position="40 0 -45" rotation="0 90 0" scale="10 10 10"></a-entity>
             <a-entity gltf-model="#lp1" position="81.201 0 0" rotation="0 90 0" scale="10 10 10"></a-entity>
             <a-entity gltf-model="#lp1" position="81.201 0 -45" rotation="0 90 0" scale="10 10 10"></a-entity>
-            <a-entity gltf-model="#lp2" position="-61.662 0 76.077" rotation="0 90 0" scale="1 1 1"></a-entity>
+            <a-entity gltf-model="#lp2" position="-69.307 0 76.077" rotation="0 90 0" scale="1 1 1"></a-entity>
             <a-entity gltf-model="#lp2" position="44.875 0 76.077" rotation="0 90 0" scale="1 1 1"></a-entity>
             <a-entity gltf-model="#lp6" position="-70 0 0" rotation="0 90 0" scale="0.250 0.250 0.250"></a-entity>
             <a-entity gltf-model="#lp6" position="-70 0 -45" rotation="0 90 0" scale="0.250 0.250 0.250"></a-entity>
@@ -222,9 +227,9 @@
                 <a-entity gltf-model="#lawn" position="12.273 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
                 <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
             </a-entity>
-            <a-entity>
-                <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
-                <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
+            <a-entity class="grassblock">
+                <!-- <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity> -->
+                <!-- <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity> -->
                 <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
                 <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
                 <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
@@ -326,10 +331,10 @@
                 <a-entity gltf-model="#tree1" scale="0.03 0.03 0.03" position="3.182 0.000 67.383"></a-entity>
                 <a-entity gltf-model="#tree1" scale="0.050 0.050 0.050" position="26.041 0.000 -89.912"></a-entity>
                 <a-entity gltf-model="#tree2" scale="0.015 0.015 0.015" position="3.182 0.000 93.346"></a-entity>
-                <a-entity gltf-model="#tree2" scale="0.015 0.015 0.015" position="-32.803 0.000 76.091"
+                <a-entity gltf-model="#tree2" scale="0.015 0.015 0.015" position="-32.803 0.000 83.000"
                     rotation="0 180 0"></a-entity>
                 <a-entity gltf-model="#tree3" scale="0.03 0.03 0.03" position="25.474 0.000 21.002"></a-entity>
-                <a-entity gltf-model="#tree3" scale="0.03 0.03 0.03" position="-38.284 0.000 -78.696"></a-entity>
+                <a-entity gltf-model="#tree3" scale="0.03 0.03 0.03" position="-49.624 0.000 -78.696"></a-entity>
             </a-entity>
         </a-entity>
         <a-entity id="architecture" class="marketplace" position="-17.201 0.037 4" rotation="0 0 0">
@@ -347,26 +352,84 @@
            color: #faaf52; side:double;"></a-plane>
             <a-text value="WEBVR" position="-10.053 5.162 25.184" font="kelsonsans" width="50"></a-text>
             <a-text value="Supermarket" position="-10.053 3.162 25.184" font="kelsonsans" width="30"></a-text>
-        </a-entity>
-        <a-entity id="interior_decorations" class="interior">
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 8.392" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -1.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -11.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -21.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -31.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -41.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#shelf1" position="-10.101 0.000 -51.608" rotation="0 90 0" scale="0.5 0.360 0.360"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -25" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -35" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -45" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#light" position="-17.334 5.700 -55" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
-            <a-entity gltf-model="#cashier1" position="-17.334 0 20" rotation="0 110.659 0" scale="0.01 0.01 0.01">
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 8.392" rotation="0 90 0" scale="0.5 0.360 0.360">
             </a-entity>
-            <a-entity gltf-model="#cashier2" position="-13.334 0 20" rotation="0 90 0" scale="0.01 0.01 0.01">
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -1.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -11.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -21.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -31.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -41.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#shelf1" position="6.000 0.000 -51.608" rotation="0 90 0" scale="0.5 0.360 0.360">
+            </a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -5" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -15" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -25" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -35" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -45" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#light" position="0.000 5.700 -55" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+            <a-entity gltf-model="#cashier1" position="-4 0 20" rotation="0 110.659 0" scale="0.01 0.01 0.01">
+            </a-entity>
+            <a-entity gltf-model="#cashier2" position="0.000 0 20" rotation="0 90 0" scale="0.01 0.01 0.01">
+            </a-entity>
+            <a-entity gltf-model="#kitchen" position="-13.064 0.050 51.778" rotation="0 -90.000 0"
+                scale="0.015 0.015 0.015">
+            </a-entity>
+            <a-entity gltf-model="#hut" position="-14.788 0.050 55.276" rotation="0 -90.000 0" scale="0.016 0.01 0.01">
+            </a-entity>
+            <a-cylinder position="-7.354 3.762 59.781" scale="1.000 7.653 1.000" radius="0.5"></a-cylinder>
+            <a-cylinder position="-20.100 3.762 71.016" scale="1.000 7.653 1.000" radius="0.5"></a-cylinder>
+            <a-cylinder position="-20.100 3.762 59.781" scale="1.000 7.653 1.000" radius="0.5"></a-cylinder>
+            <a-cylinder position="-7.354 3.762 71.016" scale="1.000 7.653 1.000" radius="0.5"></a-cylinder>
+            <a-plane id="floor" position="-11.807 0.000 63.732" rotation="-90 90 0" width="17" height="17"
+                src="#woodfloor" repeat="4 4"></a-plane>
+
+            <a-entity gltf-model="#table" position="-14.788 0 65.343" rotation="0 -90.000 0" scale="0.01 0.005 0.01">
+            </a-entity>
+
+            <!-- <a-entity position="-13.191 0.000 23.597">
+                <a-cylinder position="7.837 3.762 53.863" scale="1.000 7 1.000" radius="0.1"></a-cylinder>
+                <a-plane width="5" height="2" position="7.837 6.193 54.018" color="black">
+                    <a-text value="Cooking Tutorial" position="-1.5 0 0" font="kelsonsans" width="10"></a-text>
+                </a-plane>
+            </a-entity> -->
+
+            <a-plane width="5" height="5" position="-7.271 1.119 60.407" rotatiomn="0 40 0" color="black">
+                <a-text value="Welcome to Cooking Tutorial" position="-2.275 2 0" color="yellow" font="kelsonsans"
+                    width="5"></a-text>
+                <a-text value="Buy these items in the supermarket to prepare Cottage cheese masala"
+                    position="-2.275 1.6 0" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
+                <a-text value="1. Cottage Cheese - 250G" position="-2.275 1.15 0" font="kelsonsans" width="2.3">
+                </a-text>
+                <a-text value="2. Tomatoes - 3" position="0 1.15 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="3. Garlic - 3 Slices" position="-2.275 0.95 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="4. Onion(Medium) - 1" position="0 0.95 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="5. Butter - 2 Tbsp" position="-2.275 0.75 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="6. Cinnamon - 1 inch" position="0 0.75 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="7. Cardamom - 3" position="-2.275 0.55 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="8. Cumin - 1 Tbsp" position="0 0.55 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="9. Turmeric - 1/2 Tbsp" position="-2.275 0.35 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="10. Red chilli Powder - 1 Tbsp" position="0 0.35 0" font="kelsonsans" width="2.3">
+                </a-text>
+                <a-text value="11. Salt - Needed amount" position="-2.275 0.15 0" font="kelsonsans" width="2.3">
+                </a-text>
+                <a-text value="12. Milk - 10 ml" position="0 0.15 0" font="kelsonsans" width="2.3"></a-text>
+                <a-text value="Once after collecting all items come back to kitchen" position="-2.275 -0.4 0"
+                    color="red" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
+            </a-plane>
+        </a-entity>
+        <a-entity id="objects">
+            <a-entity id="object1" position="-12.311 4.959 13.268">
+                <a-entity gltf-model="#cheese" scale="0.010 0.010 0.010" position="0 0 0"></a-entity>
+                <a-plane width="2" height="0.5" position="0 -0.752 0.909" color="black">
+                    <a-text value="Cottage cheese" position="-0.8 0 0" font="kelsonsans"></a-text>
+                </a-plane>
             </a-entity>
         </a-entity>
 </body>
