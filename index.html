@@ -17,13 +17,10 @@
             <img id="woodfloor" src="./assets/images/woodfloor.jpg">
             <img id="wall" src="./assets/images/wall.jpg">
             <img id="citycenter" src="./assets/images/citycenter.jpg">
-            <a-asset-item id="building" src="./assets/models/supermarket/scene.gltf"></a-asset-item>
             <a-asset-item id="shelf1" src="./assets/models/shelf1/scene.gltf"></a-asset-item>
-            <a-asset-item id="shelf2" src="./assets/models/shelf2/scene.gltf"></a-asset-item>
             <a-asset-item id="light" src="./assets/models/light/scene.gltf"></a-asset-item>
             <a-asset-item id="cashier1" src="./assets/models/cashier1/scene.gltf"></a-asset-item>
             <a-asset-item id="cashier2" src="./assets/models/cashier2/scene.gltf"></a-asset-item>
-            <a-asset-item id="neighbourhood" src="./assets/models/neighbourhood/scene.gltf"></a-asset-item>
             <a-asset-item id="lp1" src="./assets/models/lp1/scene.gltf"></a-asset-item>
             <a-asset-item id="lp2" src="./assets/models/lp2/scene.gltf"></a-asset-item>
             <a-asset-item id="lp3" src="./assets/models/lp3/scene.gltf"></a-asset-item>
@@ -42,6 +39,9 @@
             <a-asset-item id="hut" src="./assets/models/hut_low/scene.gltf"></a-asset-item>
             <a-asset-item id="table" src="./assets/models/dining_table/scene.gltf"></a-asset-item>
             <a-asset-item id="cheese" src="./assets/models/cheese/scene.gltf"></a-asset-item>
+            <a-asset-item id="tomato" src="./assets/models/tomato/scene.glb"></a-asset-item>
+            <a-asset-item id="garlic" src="./assets/models/garlic/scene.glb"></a-asset-item>
+            <a-asset-item id="onion" src="./assets/models/onion/scene.glb"></a-asset-item>
         </a-assets>
         <a-entity id="rig" position="-15.000 1.7 95.000">
             <a-camera id="camera" look-controls wasd-controls="acceleration: 200" cursor="rayOrigin:mouse"></a-camera>
@@ -425,13 +425,47 @@
             </a-plane>
         </a-entity>
         <a-entity id="objects">
-            <a-entity id="object1" position="-12.311 4.959 13.268">
+            <a-entity id="object1" position="-12.311 4.959 13.439">
                 <a-entity gltf-model="#cheese" scale="0.010 0.010 0.010" position="0 0 0"></a-entity>
                 <a-plane width="2" height="0.5" position="0 -0.752 0.909" color="black">
                     <a-text value="Cottage cheese" position="-0.8 0 0" font="kelsonsans"></a-text>
                 </a-plane>
+                <a-plane width="3" height="2" position="0 -2.230 0.909" color="yellow">
+                    <a-text color="red"
+                        value="Cut cottage cheese into smaller cubes and soak them in water for 10 minutes"
+                        position="-1.363 0 0" width="2.7" font="kelsonsans"></a-text>
+                </a-plane>
+            </a-entity>
+
+            <a-entity id="object2" position="-12.311 3.312 3.439">
+                <a-entity gltf-model="#tomato" scale="0.3 0.3 0.3" position="0 -0.1 0"></a-entity>
+                <a-entity gltf-model="#tomato" scale="0.3 0.3 0.3" position="0.8 -0.1 0"></a-entity>
+                <a-entity gltf-model="#tomato" scale="0.3 0.3 0.3" position="-0.8 -0.1 0"></a-entity>
+                <a-entity gltf-model="#garlic" scale="0.1 0.1 0.1" position="1.7 0 0" rotation="-90 0 0"></a-entity>
+                <a-plane width="2" height="0.5" position="0 -0.500 0.909" color="black">
+                    <a-text value="Tomato & Garlic" position="-0.8 0 0" font="kelsonsans"></a-text>
+                </a-plane>
+                <a-plane width="3" height="2" position="0 2.230 0.909" color="yellow">
+                    <a-text color="red" value="Grind them finely into tomato and garlic paste" position="-1.363 0 0"
+                        width="2.7" font="kelsonsans"></a-text>
+                </a-plane>
+            </a-entity>
+
+            <a-entity id="object3" position="-12.311 3.312 -6.561">
+                <a-entity gltf-model="#onion" scale="0.1 0.1 0.1" position="0 -0.346 0"></a-entity>
+                <!-- <a-entity gltf-model="#garlic" scale="0.1 0.1 0.1" position="1.7 0 0" rotation="-90 0 0"></a-entity> -->
+                <a-plane width="1" height="0.5" position="0 -0.752 0.909" color="black">
+                    <a-text value="Onion" position="-0.287 0 0" font="kelsonsans"></a-text>
+                </a-plane>
+                <a-plane width="3" height="1" position="0 2.230 0.909" color="yellow">
+                    <a-text color="red" value="Chop onions finely into pieces" position="-1.363 0 0" width="2.7"
+                        font="kelsonsans"></a-text>
+                </a-plane>
             </a-entity>
         </a-entity>
+        <!-- <a-box class="player" move-along position="0 0.6 80"></a-box> -->
+    </a-scene>
+    <!-- <script src="./assets/js/movealong.js"></script> -->
 </body>
 
 </html>
