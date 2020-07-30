@@ -1,0 +1,996 @@
+{
+  "assets": [
+    {
+      "element": "a-asset-item",
+      "id": "tomato",
+      "src": "./assets/models/tomato/scene.glb"
+    },
+    {
+      "element": "img",
+      "id": "onionimg",
+      "src": "./assets/images/onion.jpg"
+    },
+    {
+      "element": "img",
+      "id": "tomatoimg",
+      "src": "./assets/images/tomato.png"
+    },
+    {
+      "element": "img",
+      "id": "gingerimg",
+      "src": "./assets/images/ginger.jpg"
+    },
+    {
+      "element": "img",
+      "id": "garlicimg",
+      "src": "./assets/images/garlic.jpg"
+    },
+    {
+      "element": "img",
+      "id": "greenchilliimg",
+      "src": "./assets/images/greenchilli.jpg"
+    },
+    {
+      "element": "img",
+      "id": "mustardimg",
+      "src": "./assets/images/mustard.jpg"
+    },
+    {
+      "element": "img",
+      "id": "cinnamonimg",
+      "src": "./assets/images/cinnamon.jpeg"
+    },
+    {
+      "element": "img",
+      "id": "cardamomimg",
+      "src": "./assets/images/cardamom.jpg"
+    },
+    {
+      "element": "img",
+      "id": "clovesimg",
+      "src": "./assets/images/cloves.jpg"
+    },
+    {
+      "element": "img",
+      "id": "turmericimg",
+      "src": "./assets/images/turmeric.jpg"
+    },
+    {
+      "element": "img",
+      "id": "chilliimg",
+      "src": "./assets/images/chilli.jpg"
+    },
+    {
+      "element": "img",
+      "id": "blackpepperimg",
+      "src": "./assets/images/blackpepper.png"
+    },
+    {
+      "element": "img",
+      "id": "corianderimg",
+      "src": "./assets/images/coriander.jpg"
+    },
+    {
+      "element": "img",
+      "id": "cuminimg",
+      "src": "./assets/images/cumin.jpg"
+    },
+    {
+      "element": "img",
+      "id": "mintimg",
+      "src": "./assets/images/mint.jpg"
+    },
+    {
+      "element": "img",
+      "id": "parsleyimg",
+      "src": "./assets/images/parsley.jpg"
+    },
+    {
+      "element": "a-asset-item",
+      "id": "waterbowl",
+      "src": "./assets/models/water_bowl/scene.gltf"
+    },
+    {
+      "element": "img",
+      "id": "butterimg",
+      "src": "./assets/images/butter.jpg"
+    },
+    {
+      "element": "img",
+      "id": "saltimg",
+      "src": "./assets/images/salt.jpg"
+    },
+    {
+      "element": "img",
+      "id": "riceimg",
+      "src": "./assets/images/rice.jpg"
+    },
+    {
+      "element": "a-asset-item",
+      "id": "gpastebowl",
+      "src": "./assets/models/gpaste_bowl/scene.gltf"
+    }
+  ],
+  "recipeinformation": [
+    {
+      "element": "a-text",
+      "value": "Buy these items in the supermarket to prepare Tomato rice",
+      "position": { "x": -2.275, "y": 1.6, "z": 0 },
+      "scale": { "x": 0.7, "y": 0.7, "z": 0.7 },
+      "font": "kelsonsans"
+    },
+    {
+      "element": "a-text",
+      "value": "1. Rice - 330 gm",
+      "position": { "x": -2.275, "y": 1.15, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "2. Tomatoes - 3",
+      "position": { "x": 0, "y": 1.15, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "3. Onion(Medium) - 1",
+      "position": { "x": -2.275, "y": 1, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "4. Ginger - 10 gm",
+      "position": { "x": 0, "y": 1, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "5. Garlic - 5 slices",
+      "position": { "x": -2.275, "y": 0.85, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "6. Green chilli - 1",
+      "position": { "x": 0, "y": 0.85, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "7. Mustard Seeds - 1/2 Tbsp",
+      "position": { "x": -2.275, "y": 0.7, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "8. Cinnamon - 1/2 inch",
+      "position": { "x": 0, "y": 0.7, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "9. Cardamom - 2",
+      "position": { "x": -2.275, "y": 0.55, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "10. Cloves - 2",
+      "position": { "x": 0, "y": 0.55, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "11. Turmeric powder - 1/4 Tbsp",
+      "position": { "x": -2.275, "y": 0.4, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "12. Chilli powder - 1/2 Tbsp",
+      "position": { "x": 0, "y": 0.4, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "13. Black Pepper powder - 1/2 Tbsp",
+      "position": { "x": -2.275, "y": 0.25, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "14. Coriander powder - 1/2 Tbsp",
+      "position": { "x": 0, "y": 0.25, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "15. Cumin powder - 1/2 Tbsp",
+      "position": { "x": -2.275, "y": 0.1, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "16. Mint leaves",
+      "position": { "x": 0, "y": 0.1, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "17. Parsley",
+      "position": { "x": -2.275, "y": -0.05, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    },
+    {
+      "element": "a-text",
+      "value": "18. Salt and Water - as needed",
+      "position": { "x": 0, "y": -0.05, "z": 0 },
+      "font": "kelsonsans",
+      "width": 2.3
+    }
+  ],
+  "recipeobjects": [
+    {
+      "element": "a-entity",
+      "id": "object1",
+      "position": { "x": -12.311, "y": 4.959, "z": 13.439 },
+      "sub-element": [
+        {
+          "element": "a-plane",
+          "pickup-object": "",
+          "scale": { "x": 1, "y": 1, "z": 1 },
+          "position": { "x": 0, "y": 0, "z": 0 },
+          "rotation": { "x": 0, "y": 0, "z": 0 },
+          "color": "black",
+          "material": {
+            "elemtype": "attribute",
+            "side": "double"
+          },
+          "sub-element": [{ "element": "a-image", "src": "#riceimg" }]
+        },
+        {
+          "element": "a-plane",
+          "width": 1,
+          "height": 0.5,
+          "position": { "x": 0, "y": -0.752, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Rice",
+              "position": { "x": -0.23, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": -2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Soak Rice in water for 30 mins",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object2",
+      "position": { "x": -12.311, "y": 4.959, "z": 3.439 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#butterimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#mustardimg" }]
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -0.752, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Butter & Mustard",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": -2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add butter, after sometime add mustard seeds and crackle them",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object3",
+      "position": { "x": -12.311, "y": 4.959, "z": -6.561 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#onionimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#cinnamonimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#cardamomimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -2, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#clovesimg" }]
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -0.752, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Miscellaneous",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": -2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add finely chopped onion, cinnamon, cardamom, cloves and saute it well until the onion turns to translucent",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object4",
+      "position": { "x": -12.311, "y": 3.312, "z": -16.561 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#gingerimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#garlicimg" }]
+            },
+            {
+              "element": "a-entity",
+              "gltf-model": "#gpastebowl",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": -1.5, "z": 0 },
+              "rotation": { "x": 0, "y": 90, "z": 0 }
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.8, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Ginger & Garlic Paste",
+              "position": { "x": -1.2, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add ginger garlic paste and saute it until raw aroma goes away",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object5",
+      "position": { "x": -12.311, "y": 3.312, "z": -26.561 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#mintimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#parsleyimg" }]
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.3, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Mint & Parsley leaves",
+              "position": { "x": -1.2, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add Mint and parsley leaves, stir and saute it for a minute",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object6",
+      "position": { "x": -12.311, "y": 3.312, "z": -36.561 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-entity",
+              "gltf-model": "#tomato",
+              "scale": { "x": 0.3, "y": 0.3, "z": 0.3 },
+              "position": { "x": 0, "y": -0.1, "z": 0 }
+            },
+            {
+              "element": "a-entity",
+              "gltf-model": "#tomato",
+              "scale": { "x": 0.3, "y": 0.3, "z": 0.3 },
+              "position": { "x": 0.8, "y": -0.1, "z": 0 }
+            },
+            {
+              "element": "a-entity",
+              "gltf-model": "#tomato",
+              "scale": { "x": 0.3, "y": 0.3, "z": 0.3 },
+              "position": { "x": -0.8, "y": -0.1, "z": 0 }
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.3, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Tomatoes",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Chop the tomatoes finely into smaller pieces",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object7",
+      "position": { "x": -12.311, "y": 3.312, "z": -46.561 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#tomatoimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#turmericimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 1, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#cuminimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": -2, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [
+                { "element": "a-image", "src": "#blackpepperimg" }
+              ]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 2, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#chilliimg" }]
+            },
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 3, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#corianderimg" }]
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.3, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Masala Items",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add Tomatoes, Cumin, Turmeric, Chilli, Black Pepper, Coriander powders and saute it well until the tomatoes becomes pulpy and oily",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object8",
+      "position": { "x": -26.247, "y": 3.312, "z": -48.77 },
+      "rotation": { "x": 0, "y": 180, "z": 0 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#riceimg" }]
+            },
+            {
+              "element": "a-entity",
+              "gltf-model": "#waterbowl",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": -1.5, "z": 0 },
+              "rotation": { "x": 0, "y": 90, "z": 0 }
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.8, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Rice & Water",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Add the soaked rice, add 3 times of rice quantity of water",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "object9",
+      "position": { "x": -26.247, "y": 3.312, "z": -38.77 },
+      "rotation": { "x": 0, "y": 180, "z": 0 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "scale": { "x": 1, "y": 1, "z": 1 },
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [{ "element": "a-image", "src": "#saltimg" }]
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 2,
+          "height": 0.5,
+          "position": { "x": 0, "y": -1.3, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Salt",
+              "position": { "x": -0.8, "y": 0, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white"
+            }
+          ]
+        },
+        {
+          "element": "a-plane",
+          "width": 3,
+          "height": 2,
+          "position": { "x": 0, "y": 2.23, "z": 0.909 },
+          "color": "black",
+          "sub-element": [
+            {
+              "element": "a-text",
+              "value": "Season with salt and close the lid and leave it for 10 mins, once the water is gone de-stove it",
+              "position": { "x": -1.363, "y": 0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "white",
+              "width": 2.7
+            },
+            {
+              "element": "a-text",
+              "value": "Click the object / Image to pick it up",
+              "position": { "x": -1.363, "y": -0.5, "z": 0 },
+              "font": "kelsonsans",
+              "color": "yellow",
+              "width": 2.7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
