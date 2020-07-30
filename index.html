@@ -243,8 +243,6 @@
                 <a-entity gltf-model="#lawn" position="12.273 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity>
             </a-entity>
             <a-entity class="grassblock">
-                <!-- <a-entity gltf-model="#lawn" position="-30.562 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity> -->
-                <!-- <a-entity gltf-model="#lawn" position="-30.562 0 68.382" rotation="0 90 0" scale="1 1 1"></a-entity> -->
                 <a-entity gltf-model="#lawn" position="-30.562 0 81.538" rotation="0 90 0" scale="1 1 1"></a-entity>
                 <a-entity gltf-model="#lawn" position="-30.562 0 93.751" rotation="0 90 0" scale="1 1 1"></a-entity>
                 <a-entity gltf-model="#lawn" position="-44.147 0 55.895" rotation="0 90 0" scale="1 1 1"></a-entity>
@@ -407,39 +405,37 @@
 
             <a-entity gltf-model="#table" position="-14.788 0 65.343" rotation="0 -90.000 0" scale="0.01 0.005 0.01">
             </a-entity>
-
-            <!-- <a-entity position="-13.191 0.000 23.597">
-                <a-cylinder position="7.837 3.762 53.863" scale="1.000 7 1.000" radius="0.1"></a-cylinder>
-                <a-plane width="5" height="2" position="7.837 6.193 54.018" color="black">
-                    <a-text value="Cooking Tutorial" position="-1.5 0 0" font="kelsonsans" width="10"></a-text>
-                </a-plane>
-            </a-entity> -->
-
+        </a-entity>
+        <a-entity position="-17.201 0.037 4" rotation="0 0 0">
             <a-plane width="5" height="5" position="-7.271 1.119 60.407" rotatiomn="0 40 0" color="black">
                 <a-text value="Welcome to Cooking Tutorial" position="-2.275 2 0" color="yellow" font="kelsonsans"
                     width="5"></a-text>
-                <a-text value="Buy these items in the supermarket to prepare Cottage cheese masala"
-                    position="-2.275 1.6 0" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
-                <a-text value="1. Cottage Cheese - 250G" position="-2.275 1.15 0" font="kelsonsans" width="2.3">
-                </a-text>
-                <a-text value="2. Tomatoes - 3" position="0 1.15 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="3. Garlic - 3 Slices" position="-2.275 0.95 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="4. Onion(Medium) - 1" position="0 0.95 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="5. Butter - 2 Tbsp" position="-2.275 0.75 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="6. Cinnamon - 1 inch" position="0 0.75 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="7. Cardamom - 3" position="-2.275 0.55 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="8. Cumin - 1 Tbsp" position="0 0.55 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="9. Turmeric - 1/2 Tbsp" position="-2.275 0.35 0" font="kelsonsans" width="2.3"></a-text>
-                <a-text value="10. Red chilli Powder - 1 Tbsp" position="0 0.35 0" font="kelsonsans" width="2.3">
-                </a-text>
-                <a-text value="11. Salt - Needed amount" position="-2.275 0.15 0" font="kelsonsans" width="2.3">
-                </a-text>
-                <a-text value="12. Milk - 10 ml" position="0 0.15 0" font="kelsonsans" width="2.3"></a-text>
+                <a-entity id="recipeinformation">
+                    <a-text value="Buy these items in the supermarket to prepare Cottage cheese masala"
+                        position="-2.275 1.6 0" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
+                    <a-text value="1. Cottage Cheese - 250G" position="-2.275 1.15 0" font="kelsonsans" width="2.3">
+                    </a-text>
+                    <a-text value="2. Tomatoes - 3" position="0 1.15 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="3. Garlic - 3 Slices" position="-2.275 0.95 0" font="kelsonsans" width="2.3">
+                    </a-text>
+                    <a-text value="4. Onion(Medium) - 1" position="0 0.95 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="5. Butter - 2 Tbsp" position="-2.275 0.75 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="6. Cinnamon - 1 inch" position="0 0.75 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="7. Cardamom - 3" position="-2.275 0.55 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="8. Cumin - 1 Tbsp" position="0 0.55 0" font="kelsonsans" width="2.3"></a-text>
+                    <a-text value="9. Turmeric - 1/2 Tbsp" position="-2.275 0.35 0" font="kelsonsans" width="2.3">
+                    </a-text>
+                    <a-text value="10. Red chilli Powder - 1 Tbsp" position="0 0.35 0" font="kelsonsans" width="2.3">
+                    </a-text>
+                    <a-text value="11. Salt - Needed amount" position="-2.275 0.15 0" font="kelsonsans" width="2.3">
+                    </a-text>
+                    <a-text value="12. Milk - 10 ml" position="0 0.15 0" font="kelsonsans" width="2.3"></a-text>
+                </a-entity>
                 <a-text value="Once after collecting all items come back to kitchen" position="-2.275 -0.4 0"
                     color="red" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
             </a-plane>
         </a-entity>
-        <a-entity id="objects">
+        <a-entity id="recipeobjects">
             <a-entity id="object1" position="-12.311 4.959 13.439">
                 <a-entity gltf-model="#cheese" scale="0.010 0.010 0.010" position="0 0 0"></a-entity>
                 <a-plane width="2" height="0.5" position="0 -0.752 0.909" color="black">
@@ -468,7 +464,6 @@
 
             <a-entity id="object3" position="-12.311 3.312 -6.561">
                 <a-entity gltf-model="#onion" scale="0.1 0.1 0.1" position="0 -0.346 0"></a-entity>
-                <!-- <a-entity gltf-model="#garlic" scale="0.1 0.1 0.1" position="1.7 0 0" rotation="-90 0 0"></a-entity> -->
                 <a-plane width="1" height="0.5" position="0 -0.752 0.909" color="black">
                     <a-text value="Onion" position="-0.287 0 0" font="kelsonsans"></a-text>
                 </a-plane>
@@ -510,7 +505,6 @@
             </a-entity>
             <a-entity id="object5" position="-12.311 3.312 -26.561">
                 <a-entity gltf-model="#pastebowl" scale="1 1 1" rotation="0 90.000 0" position="0 -1.5 0"></a-entity>
-                <!-- <a-entity gltf-model="#garlic" scale="0.1 0.1 0.1" position="1.7 0 0" rotation="-90 0 0"></a-entity> -->
                 <a-plane width="2" height="0.5" position="0 -1.800 0.909" color="black">
                     <a-text value="Tomato & Garlic" position="-0.8 0 0" font="kelsonsans"></a-text>
                 </a-plane>
@@ -602,9 +596,8 @@
                     <a-text value="Cottage cheese cubes" position="-1.2 0 0" font="kelsonsans"></a-text>
                 </a-plane>
                 <a-plane width="3" height="2" position="0 2.230 0.909" color="black">
-                    <a-text color="white"
-                        value="Add the cubes and let it heat for 5 mins"
-                        position="-1.363 0 0" width="2.7" font="kelsonsans"></a-text>
+                    <a-text color="white" value="Add the cubes and let it heat for 5 mins" position="-1.363 0 0"
+                        width="2.7" font="kelsonsans"></a-text>
                 </a-plane>
             </a-entity>
         </a-entity>
