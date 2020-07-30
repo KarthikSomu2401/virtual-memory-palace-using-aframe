@@ -10,25 +10,13 @@
         src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
 </head>
 
-<body>
+<body onload="onload3DScene()">
     <a-scene
         environment="preset: arches; ground: flat; fog: 0; dressing: none; groundColor: #ffd494; groundTexture: none; grid: none"
         sound="src: url(./assets/sounds/city_centre.mp3); autoplay: true; refDistance: 100; loop: true; volume: 0.2;">
         <a-assets>
             <img id="woodfloor" src="./assets/images/woodfloor.jpg">
             <img id="wall" src="./assets/images/wall.jpg">
-            <img id="citycenter" src="./assets/images/citycenter.jpg">
-            <img id="butterimg" src="./assets/images/butter.jpg">
-            <img id="cinnamonimg" src="./assets/images/cinnamon.jpeg">
-            <img id="cardamomimg" src="./assets/images/cardamom.jpg">
-            <img id="cuminimg" src="./assets/images/cumin.jpg">
-            <img id="onionimg" src="./assets/images/onion.jpg">
-            <img id="chilliimg" src="./assets/images/chilli.jpg">
-            <img id="turmericimg" src="./assets/images/turmeric.jpg">
-            <img id="garamimg" src="./assets/images/garam.jpg">
-            <img id="parsleyimg" src="./assets/images/parsley.jpg">
-            <img id="saltimg" src="./assets/images/salt.jpg">
-            <img id="ccheeseimg" src="./assets/images/cottagecheese.jpeg">
             <a-asset-item id="shelf1" src="./assets/models/shelf1/scene.gltf"></a-asset-item>
             <a-asset-item id="light" src="./assets/models/light/scene.gltf"></a-asset-item>
             <a-asset-item id="cashier1" src="./assets/models/cashier1/scene.gltf"></a-asset-item>
@@ -55,15 +43,6 @@
             <a-asset-item id="kitchen" src="./assets/models/low_poly_kitchen/scene.gltf"></a-asset-item>
             <a-asset-item id="hut" src="./assets/models/hut_low/scene.gltf"></a-asset-item>
             <a-asset-item id="table" src="./assets/models/dining_table/scene.gltf"></a-asset-item>
-            <a-asset-item id="cheese" src="./assets/models/cheese/scene.gltf"></a-asset-item>
-            <a-asset-item id="tomato" src="./assets/models/tomato/scene.glb"></a-asset-item>
-            <a-asset-item id="garlic" src="./assets/models/garlic/scene.glb"></a-asset-item>
-            <a-asset-item id="onion" src="./assets/models/onion/scene.glb"></a-asset-item>
-            <a-asset-item id="paste" src="./assets/models/paste/scene.gltf"></a-asset-item>
-            <a-asset-item id="pastebowl" src="./assets/models/paste_bowl/scene.gltf"></a-asset-item>
-            <a-asset-item id="waterbowl" src="./assets/models/water_bowl/scene.gltf"></a-asset-item>
-            <a-asset-item id="milkbowl" src="./assets/models/milk_bowl/scene.gltf"></a-asset-item>
-            <a-asset-item id="dad" src="./assets/models/dad/scene.gltf"></a-asset-item>
         </a-assets>
         <a-entity id="rig" position="-15.000 1.7 95.000">
             <a-camera id="camera" look-controls wasd-controls="acceleration: 200" cursor="rayOrigin:mouse"></a-camera>
@@ -428,7 +407,7 @@
                 <a-text value="Welcome to Cooking Tutorial" position="-2.275 2 0" color="yellow" font="kelsonsans"
                     width="5"></a-text>
                 <a-entity id="recipeinformation">
-                    <a-text value="Buy these items in the supermarket to prepare Cottage cheese masala"
+                    <!-- <a-text value="Buy these items in the supermarket to prepare Cottage cheese masala"
                         position="-2.275 1.6 0" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
                     <a-text value="1. Cottage Cheese - 250G" position="-2.275 1.15 0" font="kelsonsans" width="2.3">
                     </a-text>
@@ -445,8 +424,8 @@
                     <a-text value="10. Red chilli Powder - 1 Tbsp" position="0 0.35 0" font="kelsonsans" width="2.3">
                     </a-text>
                     <a-text value="11. Salt - Needed amount" position="-2.275 0.15 0" font="kelsonsans" width="2.3">
-                    </a-text>
-                    <a-text value="12. Milk - 10 ml" position="0 0.15 0" font="kelsonsans" width="2.3"></a-text>
+                    </a-text> -->
+                    <!-- <a-text value="12. Milk - 10 ml" position="0 0.15 0" font="kelsonsans" width="2.3"></a-text> -->
                 </a-entity>
                 <a-text value="Once after collecting all items come back to kitchen" position="-2.275 -0.4 0"
                     color="red" font="kelsonsans" scale="0.7 0.7 0.7"></a-text>
@@ -619,6 +598,7 @@
             </a-entity>
         </a-entity>
     </a-scene>
+    <script src="./assets/js/codegenerator.js"></script>
 </body>
 
 </html>
