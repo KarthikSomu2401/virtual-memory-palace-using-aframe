@@ -156,7 +156,7 @@
     },
     {
       "element": "a-text",
-      "value": "6. Green chilli - 1",
+      "value": "6. Salt - as needed",
       "position": { "x": 0, "y": 0.85, "z": 0 },
       "font": "kelsonsans",
       "width": 2.3
@@ -240,7 +240,7 @@
     },
     {
       "element": "a-text",
-      "value": "18. Salt and Water - as needed",
+      "value": "18. Water - as needed",
       "position": { "x": 0, "y": -0.05, "z": 0 },
       "font": "kelsonsans",
       "width": 2.3

@@ -39,7 +39,7 @@ function nestedElement(elementObject) {
 function onload3DScene() {
   var divContainer = document.querySelector("a-scene");
   (function ($) {
-    $.getJSON("./assets/data/datasample2.json", function (data) { //./assets/data/datasample1.json
+    $.getJSON("./assets/data/datasample1.json", function (data) { //./assets/data/datasample2.json
       var scene = data;
       for (var overall in scene) {
         if (overall === "assets") {
