@@ -1,4 +1,3 @@
-console.log("wlcome");
 function makeString(attributes) {
   var string = "";
   for (var key in attributes) {
@@ -132,6 +131,11 @@ function onload3DScene() {
         id: "saltimg",
         src: "./assets/images/salt.jpg",
       },
+      {
+        element: "img",
+        id: "cuminimg",
+        src: "./assets/images/cumin.jpg",
+      },
     ],
     recipeinformation: [
       {
@@ -227,444 +231,792 @@ function onload3DScene() {
         width: 2.3,
       },
     ],
-    recipeobjects: [{}],
-  };
-  /* {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#cookware",
-            "scale": { x: 0.02, y: 0.02, z: 0.02 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -10, y: 0, z: 13 },
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#fireplace-gltf",
-            "position": { x: -9.875, y: 0.058, z: 13 },
-        },
-        {
-            "element": "a-entity",
-            "position": { x: -9.875, y: 0.058, z: 13 },
-            "fire": {
-                "elemtype": "attribute",
-                "particles": 200
-            },
-            "sound": {
-                "elemtype": "attribute",
-                "src": 'url(./assets/sound/fire.mp3)',
-                "autoplay": true,
-                "loop": true,
-                "refDistance": 1.0,
-                "rolloffFactor": 5.0,
-                "volume": 1.0,
-                "distanceModel": 'exponential'
-            },
-        },
-        {
-            "element": "a-entity",
-            "position": { x: -9.775, y: 2.058, z: 13.00 },
-            "sub-element": {
-                "element": "a-entity",
-                "light": {
-                    "elemtype": "attribute",
-                    "type": 'point',
-                    "color": '#FFA200',
-                    "intensity": 1.5,
-                    "distance": 10.0,
-                    "castShadow": true,
-                    "shadowMapHeight": 1024,
-                    "shadowMapWidth": 1024,
-                },
-                "sub-element": {
-                    "element": "a-animation",
-                    "attribute": "light.intensity",
-                    "dur": 293,
-                    "fill": "towards",
-                    "to": 1.6,
-                    "repeat": "indefinite",
-                    "direction": "alternate",
-                    "easing": "ease-in-out"
-                }
-            },
-            "sub-element": {
-                "element": "a-animation",
-                "attribute": "position",
-                "dur": 163,
-                "fill": "towards",
-                "to": "0 0.1 0",
-                "repeat": "indefinite",
-                "direction": "alternate",
-                "easing": "linear"
-            }
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#choose",
-            "scale": { x: 0.5, y: 0.5, z: 0.5 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -11, y: 0, z: 14 },
-            "sub-element": {
-                "element": "a-entity",
-                "static-body": "",
-                "gltf-model": "#phone",
-                "scale": { x: 0.04, y: 0.04, z: 0.04 },
-                "rotation": { x: 0, y: 0, z: 0 },
-                "position": { x: 0, y: 0.1, z: 0 },
-            }
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#tent",
-            "scale": { x: 0.3, y: 0.3, z: 0.3 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -9.875, y: 0.058, z: 17 },
-        },
-        {
-            "element": "a-ocean",
-            "depth": 200,
-            "width": 10,
-            "amplitude": 0,
-            "amplitude-variance": 0.1,
-            "speed": 0.5,
-            "speed-variance": 1,
-            "opacity": 1,
-            "density": 70,
-            "ocean": "",
-            "position": { x: 0, y: 0, z: -5 },
-            "rotation": { x: 270, y: 90, z: 0 },
-            "sub-element": {
-                "sound": {
-                    "elemtype": "attribute",
-                    "src": 'url(./assets/sound/water.mp3)',
-                    "autoplay": true,
-                    "loop": true,
-                    "refDistance": 10,
-                    "rolloffFactor": 5.0,
-                    "volume": 0.7,
-                    "distanceModel": 'exponential',
-                }
-            }
-        },
-        {
-            "element": "a-ocean",
-            "depth": 200,
-            "width": 10,
-            "amplitude": 0,
-            "amplitude-variance": 0.2,
-            "speed": 1.5,
-            "speed-variance": 1,
-            "opacity": 0.8,
-            "density": 70,
-            "ocean": "",
-            "position": { x: 0, y: 0, z: -5 },
-            "rotation": { x: 270, y: 90, z: 0 },
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#arrow",
-            "scale": { x: 0.007, y: 0.007, z: 0.007 },
-            "rotation": { x: 1.192, y: 0.084, z: 90.048 },
-            "position": { x: 0, y: 0, z: 1 },
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#arrow",
-            "scale": { x: 0.007, y: 0.007, z: 0.007 },
-            "rotation": { x: 0.492, y: 88.084, z: 90.048 },
-            "position": { x: -9.775, y: 0.058, z: 7 },
-        },
-        {
-            "element": "a-box",
-            "static-body": "",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1.507 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -9.839, y: 0, z: 1.602 },
-        },
-        {
-            "element": "a-plane",
-            "static-body": "",
-            "color": "white",
-            "scale": { x: 1, y: 1.700, z: 1 },
-            "rotation": { x: -66.271, y: 0, z: 0 },
-            "position": { x: -9.839, y: 0.837, z: 1.580 },
-            "material": {
-                "elemtype": "attribute",
-                "side": "double"
-            }
-        },
-        {
-            "element": "a-entity",
-            "id": "tomandgarlic",
-            "repeat": {
-                "elemtype": "attribute",
-                "duration": 3000
-            }
-        },
-        {
-            "element": "a-entity",
-            "gltf-model": "#shuriken",
-            "sound": {
-                "elemtype": "attribute",
-                "src": 'url(./assets/sound/blend.mp3)',
-                "autoplay": true,
-                "loop": true,
-                "refDistance": 1.0,
-                "rolloffFactor": 5.0,
-                "volume": 0.5,
-                "distanceModel": 'exponential',
-            },
-            "scale": { x: 0.01, y: 0.01, z: 0.01 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "animation": {
-                "elemtype": "attribute",
-                "property": "rotation",
-                "dur": 500,
-                "to": "0 360 0",
-                "repeat": "indefinite",
-                "loop": true,
-            },
-            "position": { x: -9.830, y: 0.416, z: 2.954 },
-        },
-        {
-            "element": "a-plane",
-            "static-body": "",
-            "scale": { x: 2, y: 1, z: 1 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -9.830, y: 3, z: 2.954 },
-            "material": {
-                "elemtype": "attribute",
-                "side": "double",
-                "color": "yellow"
-            },
-            "animation": {
-                "elemtype": "attribute",
-                "property": "rotation",
-                "dur": 5000,
-                "to": "0 360 0",
-                "repeat": "indefinite",
-                "loop": true,
-            },
-            "sub-element": {
-                "element": "a-text",
-                "scale": { x: 0.5, y: 0.5, z: 0.5 },
-                "value": "Click me, to pick!!!",
-                "color": "red",
-                "rotation": { x: 0, y: 0, z: 0 },
-                "position": { x: -0.4, y: 0, z: 0 },
-            }
-        },
-        {
-            "element": "a-entity",
-            "gltf-model": "#choose",
-            "scale": { x: 0.5, y: 0.5, z: 0.5 },
-            "rotation": { x: 0, y: 0, z: 0 },
-            "position": { x: -9.845, y: 0, z: 2.954 },
-        },
-        {
-            "element": "a-entity",
-            "cursor-listener": "",
-            "gltf-model": "#bowl",
-            "scale": { x: 0.1, y: 0.1, z: 0.1 },
-            "position": { x: -9.830, y: 0, z: 2.954 },
-            "visible": true,
-            "sub-element": {
-                "element": "a-entity",
-                "position": { x: 0, y: 2, z: 0 },
-                "sub-element": [{
-                    "element": "a-paste",
-                    "depth": 10,
-                    "width": 5,
-                    "amplitude": 0,
-                    "amplitude-variance": 0.9,
-                    "speed": 0.5,
-                    "speed-variance": 1,
-                    "opacity": 1,
-                    "density": 70,
-                    "paste": "",
-                    "rotation": { x: 270, y: 90, z: 0 },
-                }, {
-                    "element": "a-paste",
-                    "depth": 10,
-                    "width": 5,
-                    "amplitude": 0,
-                    "amplitude-variance": 0.5,
-                    "speed": 1.5,
-                    "speed-variance": 1,
-                    "opacity": 0.8,
-                    "density": 70,
-                    "paste": "",
-                    "rotation": { x: 270, y: 90, z: 0 },
-                }]
-            }
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
-            "gltf-model": "#cott",
-            "scale": { x: 0.4, y: 0.4, z: 0.4 },
-            "rotation": { x: 0, y: 90, z: 0 },
-            "position": { x: 0, y: 0, z: 6.5 },
-        },
-        {
-            "element": "a-entity",
-            "static-body": "",
+    recipeobjects: [
+      {
+        element: "a-entity",
+        id: "object1",
+        position: { x: -12.311, y: 4.959, z: 13.439 },
+        "sub-element": [
+          {
+            element: "a-entity",
             "gltf-model": "#cheese",
-            "scale": { x: 0.009, y: 0.009, z: 0.009 },
-            "rotation": { x: 0, y: 90, z: 0 },
-            "position": { x: 0, y: 0, z: 6.5 },
-        },
-        {
-            "element": "a-entity",
-            "gltf-model": "#clock",
-            "rotation": { x: 0, y: -90, z: 0 },
-            "position": { x: 0, y: 5, z: -8 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -2, y: -0.3, z: -1 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -4, y: -0.3, z: -1 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 0, y: -0.3, z: -1 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 2, y: -0.3, z: -1 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 4, y: -0.3, z: -1 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -2, y: -0.3, z: -3 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -4, y: -0.3, z: -3 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 0, y: -0.3, z: -3 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 2, y: -0.3, z: -3 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 4, y: -0.3, z: -3 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -2, y: -0.3, z: -5 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -4, y: -0.3, z: -5 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 0, y: -0.3, z: -5 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 2, y: -0.3, z: -5 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 4, y: -0.3, z: -5 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -2, y: -0.3, z: -7 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: -4, y: -0.3, z: -7 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 0, y: -0.3, z: -7 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 2, y: -0.3, z: -7 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        },
-        {
-            "element": "a-box",
-            "color": "white",
-            "scale": { x: 1, y: 1, z: 1 },
-            "position": { x: 4, y: -0.3, z: -7 },
-            "rotation": { x: 135, y: 0, z: 45 },
-        } */
+            "pickup-object": "",
+            scale: { x: 0.01, y: 0.01, z: 0.01 },
+            position: { x: 0, y: 0.1, z: 0 },
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Cottage cheese",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: -2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Cut cottage cheese into smaller cubes and soak them in water for 10 minutes",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object2",
+        position: { x: -12.311, y: 3.312, z: 3.439 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "pickup-object": "",
+            "sub-element": [
+              {
+                element: "a-entity",
+                "gltf-model": "#tomato",
+                scale: { x: 0.3, y: 0.3, z: 0.3 },
+                position: { x: 0, y: -0.1, z: 0 },
+              },
+              {
+                element: "a-entity",
+                "gltf-model": "#tomato",
+                scale: { x: 0.3, y: 0.3, z: 0.3 },
+                position: { x: 0.8, y: -0.1, z: 0 },
+              },
+              {
+                element: "a-entity",
+                "gltf-model": "#tomato",
+                scale: { x: 0.3, y: 0.3, z: 0.3 },
+                position: { x: -0.8, y: -0.1, z: 0 },
+              },
+              {
+                element: "a-entity",
+                "gltf-model": "#garlic",
+                scale: { x: 0.1, y: 0.1, z: 0.1 },
+                position: { x: 1.7, y: 0, z: 0 },
+                rotation: { x: -90, y: 0, z: 0 },
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -0.5, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Tomato & Garlic",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Grind them finely into tomato and garlic paste",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object3",
+        position: { x: -12.311, y: 4.959, z: -6.561 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "gltf-model": "#onion",
+            "pickup-object": "",
+            scale: { x: 0.1, y: 0.1, z: 0.1 },
+            position: { x: 0, y: -0.346, z: 0 },
+          },
+          {
+            element: "a-plane",
+            width: 1,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Onion",
+                position: { x: -0.287, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: -2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Chop onions finely into  smaller pieces",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object4",
+        position: { x: -12.311, y: 3.312, z: -16.561 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "pickup-object": "",
+            "sub-element": [
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 0, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#onionimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: -1, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#butterimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 1, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#cardamomimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: -2, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#cuminimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 2, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#cinnamonimg" }],
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Masala Items",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Add 1Tbsp of butter, cinnamon, cardamom, cumin, onion and saute it well until it turns little brownish",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object5",
+        position: { x: -12.311, y: 3.312, z: -26.561 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "gltf-model": "#pastebowl",
+            "pickup-object": "",
+            scale: { x: 1, y: 1, z: 1 },
+            position: { x: 0, y: -1.5, z: 0 },
+            rotation: { x: 0, y: 90, z: 0 },
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -1.8, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "T & G Paste",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 1.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Add this paste and boil it until it turns reddish",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object6",
+        position: { x: -12.311, y: 3.312, z: -36.561 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "pickup-object": "",
+            "sub-element": [
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 0, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#turmericimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: -1, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#chilliimg" }],
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Turmeric & Chilli",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Add turmeric, chilli powder and saute it well",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object7",
+        position: { x: -12.311, y: 3.312, z: -46.561 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "gltf-model": "#waterbowl",
+            "pickup-object": "",
+            scale: { x: 1, y: 1, z: 1 },
+            position: { x: 0, y: -1.5, z: 0 },
+            rotation: { x: 0, y: 90, z: 0 },
+          },
+          {
+            element: "a-plane",
+            width: 1,
+            height: 0.5,
+            position: { x: 0, y: -1.8, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Water",
+                position: { x: -0.2, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 1.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Add water and saute it well until it becomes pasty, repeat the process for better pastiness",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object8",
+        position: { x: -26.247, y: 3.312, z: -48.77 },
+        rotation: { x: 0, y: 180, z: 0 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "pickup-object": "",
+            "sub-element": [
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 0, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#butterimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: -1, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#garamimg" }],
+              },
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 1, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#parsleyimg" }],
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Garam, Butter & Parsley",
+                position: { x: -1.2, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Add Garam masala, parsley and 1 Tbsp of butter and saute it well",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object9",
+        position: { x: -26.247, y: 3.312, z: -38.77 },
+        rotation: { x: 0, y: 180, z: 0 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "pickup-object": "",
+            "sub-element": [
+              {
+                element: "a-plane",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 0, y: 0, z: 0 },
+                rotation: { x: 0, y: 0, z: 0 },
+                color: "black",
+                material: {
+                  elemtype: "attribute",
+                  side: "double",
+                },
+                "sub-element": [{ element: "a-image", src: "#saltimg" }],
+              },
+              {
+                element: "a-entity",
+                "gltf-model": "#waterbowl",
+                scale: { x: 1, y: 1, z: 1 },
+                position: { x: 0, y: -1.5, z: 0 },
+                rotation: { x: 0, y: 90, z: 0 },
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 2,
+            height: 0.5,
+            position: { x: 0, y: -1.8, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Salt & Water",
+                position: { x: -0.8, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Add water and salt as needed and heat it until it reaches boiling point",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object10",
+        position: { x: -26.247, y: 3.312, z: -28.77 },
+        rotation: { x: 0, y: 180, z: 0 },
+        "sub-element": [
+          {
+            element: "a-entity",
+            "gltf-model": "#milkbowl",
+            "pickup-object": "",
+            scale: { x: 1, y: 1, z: 1 },
+            position: { x: 0, y: -1.5, z: 0 },
+            rotation: { x: 0, y: 90, z: 0 },
+          },
+          {
+            element: "a-plane",
+            width: 1,
+            height: 0.5,
+            position: { x: 0, y: -1.8, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Milk",
+                position: { x: -0.2, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 1.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value:
+                  "Add some milk for better tastiness and heat it for few mins",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        element: "a-entity",
+        id: "object11",
+        position: { x: -26.247, y: 3.312, z: -18.77 },
+        rotation: { x: 0, y: 180, z: 0 },
+        "sub-element": [
+          {
+            element: "a-plane",
+            "pickup-object": "",
+            scale: { x: 1, y: 1, z: 1 },
+            position: { x: 0, y: 0, z: 0 },
+            rotation: { x: 0, y: 0, z: 0 },
+            color: "black",
+            material: {
+              elemtype: "attribute",
+              side: "double",
+            },
+            "sub-element": [{ element: "a-image", src: "#ccheeseimg" }],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 0.5,
+            position: { x: 0, y: -0.752, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Cottage cheese cubes",
+                position: { x: -1.2, y: 0, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+              },
+            ],
+          },
+          {
+            element: "a-plane",
+            width: 3,
+            height: 2,
+            position: { x: 0, y: 2.23, z: 0.909 },
+            color: "black",
+            "sub-element": [
+              {
+                element: "a-text",
+                value: "Add the cubes and let it heat for 5 mins",
+                position: { x: -1.363, y: 0.5, z: 0 },
+                font: "kelsonsans",
+                color: "white",
+                width: 2.7,
+              },
+              {
+                element: "a-text",
+                value: "Click the object / Image to pick it up",
+                position: { x: -1.363, y: -0.5, z: 0 },
+                font: "kelsonsans",
+                color: "yellow",
+                width: 2.7,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
   for (var overall in scene) {
     if (overall === "assets") {
       var assets = document.querySelector("a-assets");
@@ -677,27 +1029,12 @@ function onload3DScene() {
         recipeInfo.appendChild(generateRecipeInfo(scene[overall][item]));
       }
     } else {
-      /* var recipeObjects = document.querySelector("#" + overall + "");
+      var recipeObjects = document.querySelector("#" + overall + "");
       for (var item = 0; item < scene[overall].length; item++) {
-        recipeObjects.appendChild(generateAssets(scene[overall][item]));
-      } */
-    }
-  }
-  /* for (var i = 0; i < scene.length; i++) {
-    var element = document.createElement(scene[i]["element"]);
-    for (var key in scene[i]) {
-      if (key !== "element") {
-        if (key === "sub-element") {
-          element.appendChild(nestedElement(scene[i][key]));
-        } else if (scene[i][key].elemtype === "attribute") {
-          element.setAttribute(key, makeString(scene[i][key]));
-        } else {
-          element.setAttribute(key, scene[i][key]);
-        }
+        recipeObjects.appendChild(generateRecipeObjects(scene[overall][item]));
       }
     }
-    divContainer.appendChild(element);
-  } */
+  }
 }
 
 function generateAssets(assetToBeAdded) {
@@ -715,6 +1052,30 @@ function generateRecipeInfo(infoToBeAdded) {
   for (var key in infoToBeAdded) {
     if (key !== "element") {
       element.setAttribute(key, infoToBeAdded[key]);
+    }
+  }
+  return element;
+}
+
+function generateRecipeObjects(objectToBeAdded) {
+  var element = document.createElement(objectToBeAdded["element"]);
+  for (var key in objectToBeAdded) {
+    if (key !== "element") {
+      if (key === "sub-element") {
+        for (
+          var elements = 0;
+          elements < objectToBeAdded[key].length;
+          elements++
+        ) {
+          element.appendChild(
+            generateRecipeObjects(objectToBeAdded[key][elements])
+          );
+        }
+      } else if (objectToBeAdded[key].elemtype === "attribute") {
+        element.setAttribute(key, makeString(objectToBeAdded[key]));
+      } else {
+        element.setAttribute(key, objectToBeAdded[key]);
+      }
     }
   }
   return element;
