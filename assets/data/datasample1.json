@@ -94,6 +94,11 @@
       "element": "img",
       "id": "cuminimg",
       "src": "./assets/images/cumin.jpg"
+    },
+    {
+      "element": "img",
+      "id": "ccmasalaimg",
+      "src": "./assets/images/ccmasala.png"
     }
   ],
   "recipeinformation": [
@@ -914,6 +919,7 @@
         {
           "element": "a-plane",
           "pickup-object": "",
+          "prepare-info": "",
           "scale": { "x": 1, "y": 1, "z": 1 },
           "position": { "x": 0, "y": 0, "z": 0 },
           "rotation": { "x": 0, "y": 0, "z": 0 },
@@ -962,6 +968,71 @@
               "font": "kelsonsans",
               "color": "yellow",
               "width": 2.7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "element": "a-entity",
+      "id": "resultobject",
+      "visible": false,
+      "position": { "x": -28.233, "y": 1.119, "z": 55.579 },
+      "rotation": { "x": 0, "y": 90, "z": 0 },
+      "sub-element": [
+        {
+          "element": "a-entity",
+          "pickup-object": "",
+          "display-recipe": "",
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "width": 3,
+              "height": 2,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [
+                {
+                  "element": "a-text",
+                  "value": "Click here to prepare the Recipe",
+                  "position": { "x": -1.2, "y": 0, "z": 0 },
+                  "font": "kelsonsans",
+                  "color": "white",
+                  "width": 2.7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "element": "a-entity",
+          "id": "displayfinal",
+          "visible": false,
+          "sub-element": [
+            {
+              "element": "a-plane",
+              "width": 3,
+              "height": 2,
+              "position": { "x": 0, "y": 0, "z": 0 },
+              "rotation": { "x": 0, "y": 0, "z": 0 },
+              "color": "black",
+              "material": {
+                "elemtype": "attribute",
+                "side": "double"
+              },
+              "sub-element": [
+                {
+                  "element": "a-image",
+                  "src": "#ccmasalaimg",
+                  "width": 3,
+                  "height": 2
+                }
+              ]
             }
           ]
         }
